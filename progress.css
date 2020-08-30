@@ -1,6 +1,6 @@
 td,
 th {
-    border: 1px solid rgb(190, 190, 190);
+    border: 1px solid rgb(228, 240, 245);
     padding: 10px;
 }
 
@@ -9,26 +9,26 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: #eee;
+    background-color: rgb(237,238,242);
 }
 
 th[scope="col"] {
-    background-color: #696969;
+    background-color: rgb(100,100,100);
     color: #fff;
 }
 
 th[scope="row"] {
-    background-color: #d7d9f2;
+    background-color: rgb(228, 24,245);
 }
 
 caption {
     padding: 10px;
-    caption-side: bottom;
+    caption-side: top;
 }
 
 table {
     border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
+    border: 2px solid red;
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;

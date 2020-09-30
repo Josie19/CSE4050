@@ -4,7 +4,7 @@ var app_firebase = {};
 var config = {
     apiKey: "AIzaSyAjutEM72BnpnjZhs_diy1hmkoqmegVxI4",
     authDomain: "cse4050-firebase-web.firebaseapp.com",
-    databaseURL: "https://cse4050-firebase-web.firebaseio.com",
+    databaseURL: "https://cse4050-firebase-web.firebaseio.com/login.html?mode=select",
     projectId: "cse4050-firebase-web",
     storageBucket: "cse4050-firebase-web.appspot.com",
     messagingSenderId: "904068807368",

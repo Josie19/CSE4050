@@ -1,7 +1,7 @@
 var mainApp = {};
 //will check for change in User Key or ID and invoke automatic sign-out if true 
 (function(){
-    var firebase = app_fireBase;
+    var firebase = app_firebase;
     var uid = null;
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {

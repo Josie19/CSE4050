@@ -1,12 +1,12 @@
 var mainApp = {};
-//will check for change in User Key or ID and invoke automatic sign-out if true 
+//will verify existance of User Key or ID and redirect to authorized-based version of web app if true 
 (function(){
     var firebase = app_firebase;
     var uid = null;
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           // User is signed in.
-          uid = user.uid;
+          uid = user.uid; 
         }
         else
         {

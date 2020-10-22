@@ -6,6 +6,7 @@ l<!DOCTYPE html>
 		<meta name=viewport content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Main Menu</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="./style.css" type="text/css"/>
 	</head>
 	<body>
@@ -17,6 +18,25 @@ l<!DOCTYPE html>
 				<li><a href="login.html">Sign in</a></li>
 			</ul>
 		</nav>
+		<div class="form-example">
+			<h1 id="outputText">Change the name currently stored on the cloud</h1>
+			<input type="textfield" id="inputText"/>
+			<button id="loadButton">load</button>
+			<button id="saveButton">save</button>
+		</div>
+		<!--
+		<form action="" method="get" class="form-example">
+			cannot be empty upon clicking save button
+			<div class="form-example">
+			  <label for="name">Enter your name: </label>
+			  <input type="text" name="name" id="inputText" required>
+			</div>
+			<div class="form-example">
+			  <input type="submit" value="Save" id="saveButton">
+			</div>
+		  </form>
+		</form>
+		-->
 		<aside class="nav-sidebar">
 			 <ul>
 				<li><span>Class Resources</span></li>
@@ -27,8 +47,9 @@ l<!DOCTYPE html>
 		</aside>
 		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
 		<script src="./web.js"></script>
-		<script src="authState.js"></script>
+		<script src="./authState.js"></script>
 	</body>
 	<script src="./main.js"></script>
 </nav>

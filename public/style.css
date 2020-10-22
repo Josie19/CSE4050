@@ -1,5 +1,28 @@
 body {
 	background-color: #F1F1F1;
+	background-image: url("./WebApp.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+form.form-example {
+	display: table;
+	padding-left: 5%;
+	padding-top: 5%;
+}
+
+div.form-example {
+	padding-left: 5%;
+	padding-top: 5%;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
 }
 
 .nav-main {
@@ -14,9 +37,9 @@ body {
 }
 
 .btn-toggle-nav{
-	width: 60px;
-        height: 100%;
-        background-color: #F98F39;
+	width: 50px;
+		height: 100%;
+        background-color: hsl(204, 83%, 53%);
         background-image: url("./menu.png");
         background-repeat: no-repeat;
         background-size: 70%;

@@ -23,9 +23,12 @@ const loaderButton = document.querySelector("#loadButton");
 
 saveButton.addEventListener("click", function(){
     const textSave = inputField.value;
-    console.log("The input: "+textSave+", is now on firebase.");
+    console.log("The input: "+ textSave + ", is now on firebase.");
     docRef.set({
-        fullName: textSave
+        fullName: textSave,
+        gradYear: textSave,
+        studentMajor: textSave,
+        studentAge: textSave
     }).then(function(){
         console.log("Input saved!");
     }).catch(function(){
@@ -37,7 +40,8 @@ loaderButton.addEventListener("click", function(){
     docRef.get().then(function (doc) {
         if(doc && doc.exists){
             const myData = doc.data();
-            outputHeader.innerText = "Current in the cloud: "+ myData.fullName;
+            outputHeader.innerText = "Current in the cloud: "+ "Username: " + myData.fullName + ", Grad Year: " + myData.gradYear + ", Major: " + myData.studentMajor + ", Age: " +myData.studentAge;
+
         }
     }).catch(function(error){
         console.log("Error message", error);
@@ -49,7 +53,7 @@ getRealtimeUpdates = function(){
         if(doc && doc.exitst){
             const myData = doc.data();
             console.log("Notification of incoming document ", doc);
-            outputHeader.innerText = "Name on Cloud: "+ myData.fullName;
+            outputHeader.innerText = "Name on Cloud: "+ "Username: " + myData.fullName + ", Grad Year: " + myData.gradYear + ", Major: " + myData.studentMajor+ ", Age: " + myData.studentAge;
         }
     })
 }

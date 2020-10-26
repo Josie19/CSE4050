@@ -17,18 +17,24 @@ var firestore = firebase.firestore();
 
 const docRef = firestore.doc("users/studentData");//syntax: users/<field_name> if error
 const outputHeader = document.querySelector("#outputText");
-const inputField = document.querySelector("#inputText");
+const inputField = document.querySelector("#inputName");
+const inputField2 = document.querySelector("#inputYear");
+const inputField3 = document.querySelector("#inputMajor");
+const inputField4 = document.querySelector("#inputAge");
 const saveButton = document.querySelector("#saveButton");
 const loaderButton = document.querySelector("#loadButton");
-
+//saving data to docRef is not working; inputField2,3,4 are returning a NULL value
 saveButton.addEventListener("click", function(){
     const textSave = inputField.value;
-    console.log("The input: "+ textSave + ", is now on firebase.");
+    const textSave2 = inputField3.value;
+    const numSave = inputField2.value;
+    const numSave2 = inputField4.value;
+    console.log(`The input: ${textSave}, ${numSave2}, is now on firebase.`);
     docRef.set({
         fullName: textSave,
-        gradYear: textSave,
-        studentMajor: textSave,
-        studentAge: textSave
+        gradYear: numSave2,
+        studentMajor: textSave2,
+        studentAge: numSave
     }).then(function(){
         console.log("Input saved!");
     }).catch(function(){
@@ -36,6 +42,7 @@ saveButton.addEventListener("click", function(){
     })
 })
 
+//retreiving data is working
 loaderButton.addEventListener("click", function(){
     docRef.get().then(function (doc) {
         if(doc && doc.exists){
@@ -59,6 +66,7 @@ getRealtimeUpdates = function(){
 }
 
 getRealtimeUpdates();
+//next, adding cloud firestore messaging
 /*
 var dBase = firebase.firestore();//incorrect syntax?
 

@@ -1,10 +1,10 @@
 body {
 	background-color: #F1F1F1;
 	background-image: url("./WebApp.jpg");
+	background-size: cover;
 	background-repeat: no-repeat;
-	background-size: 100%;
-	background-position: center;
 }
+
 form.form-example {
 	display: table;
 	padding-left: 5%;
@@ -42,7 +42,7 @@ label {
         background-color: hsl(204, 83%, 53%);
         background-image: url("./menu.png");
         background-repeat: no-repeat;
-        background-size: 70%;
+        background-size:70%;
         background-position: center;
         cursor: pointer;
 }

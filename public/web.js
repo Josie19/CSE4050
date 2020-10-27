@@ -15,6 +15,8 @@ firebase.initializeApp(config);
 app_firebase = firebase;
 var firestore = firebase.firestore();
 
+//});
+
 const docRef = firestore.doc("users/studentData");//syntax: users/<field_name> if error
 const outputHeader = document.querySelector("#outputText");
 const inputField = document.querySelector("#inputName");
@@ -27,9 +29,9 @@ const loaderButton = document.querySelector("#loadButton");
 saveButton.addEventListener("click", function(){
     const textSave = inputField.value;
     const textSave2 = inputField3.value;
-    const numSave = inputField2.value;
-    const numSave2 = inputField4.value;
-    console.log(`The input: ${textSave}, ${numSave2}, is now on firebase.`);
+    const numSave = inputField4.value;
+    const numSave2 = inputField2.value;
+    console.log(`The input: ${textSave}, ${numSave2}, ${textSave2}, ${numSave}, is now on firebase.`);
     docRef.set({
         fullName: textSave,
         gradYear: numSave2,
@@ -66,25 +68,5 @@ getRealtimeUpdates = function(){
 }
 
 getRealtimeUpdates();
-//next, adding cloud firestore messaging
-/*
-var dBase = firebase.firestore();//incorrect syntax?
 
-  dBase.collection("users").add({
-    first: "Ada",
-    last: "Lovelace",
-    born: 1815
-})
-.then(function (docRef) {
-        console.log("Document written with ID: ", docRef.id);
-    })
-.catch(function(error) {
-    console.error("Error adding document: ", error);//uncaught permissions
-});
-dBase.collection("users").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-    });
-});
-*/
 })()

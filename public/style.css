@@ -1,7 +1,7 @@
 body {
 	background-color: #F1F1F1;
 	background-image: url("./WebApp.jpg");
-	background-size: cover;
+	background-image: cover;
 	background-repeat: no-repeat;
 }
 
@@ -15,7 +15,18 @@ div.form-example {
 	padding-left: 5%;
 	padding-top: 5%;
 }
-
+div.fileUpload {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+h2{
+	border-color: white;
+	font-style: normal;
+	color: black;
+	text-decoration: underline;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-stretch: expanded;
+}
 label, input {
     display: table-cell;
     margin-bottom: 10px;

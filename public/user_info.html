@@ -21,8 +21,39 @@
 			<input id="textfield" type="inputAge" name="age"/><br><br>
 			<button id="saveButton">save</button>
 			<button id="loadButton">load</button>
-        </div>
-        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+		</div>
+		
+		<div class="fileUpload">
+			<h2>Add a profile pic</h2>
+			<!--<progress value="0" max="100" id="uploader">0%</progress>-->
+			<input type="file" value="upload" id="photo"/>
+			<img id="image"/>
+			<button onclick="uploadImage()">Upload Image</button>
+		</div>
+		<script>
+			function uploadImage(){
+				const storeRef = firebase.storage().ref()
+
+				var uploader = document.getElementById('uploader')
+				const file = document.querySelector("#photo").files[0]
+   				const name = new Date() + '-' + file.name
+    			
+   				var metadata = {
+        			contentType: file.type
+    			}
+    			const task = storeRef.child('profile_pic/' + name).put(file,metadata)
+    			task
+    			.then(snapshot => snapshot.ref.getDownloadURL())
+    			.then(url => {
+        			console.log(url)
+        			alert("Image upload successful!")
+        			const image = document.querySelector('#image')
+        			image.src = url
+				})
+			}
+		</script>
+		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
 		<script src="./web.js"></script>

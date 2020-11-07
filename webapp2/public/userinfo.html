@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    
+</head>
+<body>
+    <!-- Login screen -->
+    <h1>User Info</h1>
+    <main>
+        <form>
+            <label for="userid">User ID</label><br>
+            <input type="text" name="userid" id="userid"><br>
+            <label for="fname">First</label><br>
+            <input type="text" name="fname" id="fname"><br>
+            <label for="lname">Last</label><br>
+            <input type="text" name="lname" id="lname"><br>
+            <label for="age">Age</label><br>
+            <input type="number" name="age" id="age"><br>
+            <button id="addbtn">Add</button>
+        </form>
+    </main>
+    <script src="./hosting.js"></script>
+</body>
+</html>

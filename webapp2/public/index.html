@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Home</title>
+        <link rel="stylesheet" href="./home.css" type="text/css"/>
+    </head>
+    <body>
+        <h1>Game Center</h1>
+        <div>
+            <ul class="list_section">
+                <li class = "active" data-li="tictactoe"><a href="./tictactoe.html">Tic-Tac-Toe</a></li>
+                <li data-li="21"><a href="#">21</a></li>
+                <li data-li="goldfish"><a href="#">Goldfish</a></li>
+                <li><a href="./leaderboard.html">Leaderboards</a></li>
+            </ul>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+        <script src="./hosting.js"></script>
+        <script src="./login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Leaderboard</title>
+        <link rel="stylesheet" href="./style.css" type="text/css"/>
+    </head>
+    <body>
+        <div class="userinfo">
+            <ul>
+                <li><a href="./userinfo.html">Users</a></li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <div class="lboard_section">
+                <div class="lboard_tabs">
+                    <div class="tabs">
+                        <ul>
+                            <li data-li="today">Today</li>
+                            <li class="active" data-li="month">Month</li>
+                            <li data-li="year">Year</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lboard_wrap"></div>
+                    <div class="lboard_item today">
+                        <div class="lboard_mem">
+                            <div class="img">
+                                <img src="pic.png" alt="picture">
+                            </div>
+                            <div class="name_bar">
+                                <p><span>1.</span> Jose Magallanes</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="class_points">
+                                100 points
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lboard_item month">
+
+                    </div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    </body>
+</html>

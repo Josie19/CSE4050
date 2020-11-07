@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+*{
+    list-style: none;
+    font-family: 'Fredoka One', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #f94f62;
+}
+body h1{
+    font-family: 'Fredoka One', cursive;
+    color: rgb(6, 236, 236);
+    font-size: 80px;
+    font-weight: 800;
+    font-stretch: extra-expanded;
+    text-align: center;
+    cursor: context-menu;
+}
+.list_section ul li:hover, .list_section ul li.active{
+    color: #fff;
+}
